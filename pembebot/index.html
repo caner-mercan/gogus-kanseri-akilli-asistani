@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎗️</text></svg>">
+<title>PembeBot · Göğüs Kanseri Asistanı</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>🎗️ PembeBot</h1>
+<p>Göğüs kanseri hakkında bilgi veren ve Wisconsin veri setiyle eğitilmiş modelle çalışan asistan</p>
+</header>
+<div class="warn">⚠️ Bu site eğitim amaçlıdır. Tıbbi tanı koymaz, doktor muayenesinin yerini tutmaz. Bir şüphen varsa mutlaka bir sağlık kuruluşuna başvur.</div>
+<main>
+<section class="card" id="chat">
+<div id="log" aria-live="polite"></div>
+<div class="chips" id="chips"></div>
+<form id="fm"><input type="text" id="q" placeholder="Bir soru yaz… (ör. belirtiler nelerdir?)" autocomplete="off"><button class="go">Gönder</button></form>
+</section>
+<aside class="card">
+<h2>🔬 Hücre ölçümlerinden tahmin</h2>
+<small>FNA (ince iğne aspirasyonu) görüntülerinden elde edilen 6 ölçümü ayarla. Model: Lojistik Regresyon.</small>
+<div id="sl"></div>
+<button class="go" id="pr" style="width:100%;padding:10px;margin-top:6px">Tahmin et</button>
+<div class="res" id="res"></div>
+<p><small>Veri: 569 örnek (357 iyi huylu, 212 kötü huylu). Bu 6 özellikli model test setinde yaklaşık %94 doğruluk verdi; not defterindeki 30 özellikli modeller daha yüksek skor alır.</small></p>
+</aside>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
